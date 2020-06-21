@@ -1,4 +1,5 @@
 import keyword
+from builtins import print
 
 print(keyword.kwlist)
 print(keyword.iskeyword('True'))
@@ -143,6 +144,21 @@ print('возведение в степень')
 print(x ** y)
 print(pow(x, y, 10))
 
+print('Result func repr(obj)', repr(lst1))
+print('Result func repr(obj)', repr(st))
+print('Result func repr(obj)', repr(itr))
 
 
+print('Round')
+r = 3.75635
 
+print(round(r, 4))
+print(round(r, 3))
+print(round(r, 2))
+print(round(r, 1))
+print(round(r))
+
+r = 56789
+
+print(round(r))
+print(round(r, 3))
