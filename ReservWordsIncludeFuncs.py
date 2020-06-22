@@ -158,7 +158,14 @@ print(round(r, 2))
 print(round(r, 1))
 print(round(r))
 
-r = 56789
+r = 56489
 
 print(round(r))
-print(round(r, 3))
+print(round(r, -1))
+print(round(r, -2))
+print(round(r, -3))
+print(round(r, -4))
+
+powres = pow(2, 3, 3) # возведение 2 в степень 3 и нахождение остатка от деления на 3
+print(powres)
+
