@@ -52,12 +52,12 @@ print('Actual money ', actual_money)
 print('Truncated money ', truncated_money)
 
 
-print('in --- int  ---  ceil --- floor --- half_up --- half_down')
-print('12.5 ---', trunc_II(12.5, 0), '---', round_up(12.5, 0), '---', round_down(12.5, 0), '---', round_half_up(12.5, 0), '---', round_half_down(12.5, 0), '---', round_half_away_from_zero(12.5, 0))
-print('-5.87 ---', trunc_II(-5.87, 1), '---', round_up(-5.87, 1), '---', round_down(-5.87, 1), '---', round_half_up(-5.87, 1), '---', round_half_down(-5.87, 1), '---', round_half_away_from_zero(-5.87, 1))
-print('1.625---', trunc_II(1.625, 2), '---', round_up(1.625, 2), '---', round_down(1.625, 2), '---', round_half_up(1.625, 2), '---', round_half_down(1.625, 2), '---', round_half_away_from_zero(1.625, 2))
-print('-127.4 ---', trunc_II(-127.4, -1), '---', round_up(-127.4, -1), '---', round_down(-127.4, -1), '---', round_half_up(-127.4, -1), '---', round_half_down(-127.4, -1), '---', round_half_away_from_zero(-127.4, -1))
-print('127.9 ---', trunc_II(127.9, -1), '---', round_up(127.9, -1), '---', round_down(127.9, -1), '---', round_half_up(127.9, -1), '---', round_half_down(127.9, -1), '---', round_half_away_from_zero(127.9, -1))
+print('in'.ljust(10),'int'.ljust(10), 'ceil'.ljust(10), 'floor'.ljust(10), 'half_up'.ljust(10), 'half_down'.ljust(10),'away_from_zero'.ljust(10))
+print('12.5'.ljust(10), str(trunc_II(12.5, 0)).ljust(10), str(round_up(12.5, 0)).ljust(10), str(round_down(12.5, 0)).ljust(10), str(round_half_up(12.5, 0)).ljust(10), str(round_half_down(12.5, 0)).ljust(10), str(round_half_away_from_zero(12.5, 0)).ljust(10))
+print('-5.87'.ljust(10), str(trunc_II(-5.87, 1)).ljust(10), str(round_up(-5.87, 1)).ljust(10), str( round_down(-5.87, 1)).ljust(10), str(round_half_up(-5.87, 1)).ljust(10), str(round_half_down(-5.87, 1)).ljust(10), str(round_half_away_from_zero(-5.87, 1)).ljust(10))
+print('1.625'.ljust(10), str(trunc_II(1.625, 2)).ljust(10), str(round_up(1.625, 2)).ljust(10), str(round_down(1.625, 2)).ljust(10), str(round_half_up(1.625, 2)).ljust(10), str(round_half_down(1.625, 2)).ljust(10), str(round_half_away_from_zero(1.625, 2)).ljust(10))
+print('-127.4'.ljust(10), str(trunc_II(-127.4, -1)).ljust(10), str(round_up(-127.4, -1)).ljust(10), str(round_down(-127.4, -1)).ljust(10), str(round_half_up(-127.4, -1)).ljust(10), str(round_half_down(-127.4, -1)).ljust(10), str(round_half_away_from_zero(-127.4, -1)).ljust(10))
+print('127.9'.ljust(10), str(trunc_II(127.9, -1)).ljust(10), str(round_up(127.9, -1)).ljust(10), str(round_down(127.9, -1)).ljust(10), str(round_half_up(127.9, -1)).ljust(10), str(round_half_down(127.9, -1)).ljust(10), str(round_half_away_from_zero(127.9, -1)).ljust(10))
 
 data = [1.25, -2.67, 0.43, -1.79, 4.32, -8.19]
 
