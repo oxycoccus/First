@@ -129,7 +129,7 @@ def stringmodify(s: str):
     print('String modify :', s)
     print('Upper: ', s.upper())
     print('Lower: ', s.lower())
-    print('Capitalize:', s.strip().capitalize())
+    print('Capitalize:', s.strip().capitalize()) # первый символ строки в верхний все отсальные в нижний
     print('SwapCase:', s.swapcase())
     print('Title:', s.upper().title()) # каждое слово с большой буквы остальные буквы маленькие
     print(s.center(20, '*')+s.center(20, '*'))
