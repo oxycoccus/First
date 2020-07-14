@@ -71,9 +71,9 @@ print('поиск подстроки (первое вхождение):', slong.
 print('поиск подстроки (последнее вхождение):', slong.rfind('тр', 0, len(slong)))
 
 print(slong)
-# поиск подстроки , но возвращаемое значение не -1 в случае если не найдено
-k = slong.index('много', 0, len(slong))
-print(k)
+# поиск подстроки , но возвращаемое значение не -1 в случае если не найдено а выпадает в ошибку
+#k = slong.index('многк', 0, len(slong))
+#print(k)
 
 print('Результат str.index:', print(slong.index('много', 0, len(slong)))) # какой-то странный вывод получается
 
@@ -110,7 +110,7 @@ def stringanalize(s: str):
     print('isprintable', s.isprintable())
     print('startwith', s.startswith('12'))
     print('endwith', s.endswith('5'))
-    print('count', s.count('s', 0, len(s)))
+    print('count', s.count("s", 0, len(s)))
 
 
 s = '12.5555'

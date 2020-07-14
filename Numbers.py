@@ -1,5 +1,6 @@
 
 import math
+import decimal
 
 
 x = 5
@@ -44,8 +45,16 @@ print(int.bit_length(n)) # длина необходимая для хранен
 
 f = 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1
 print(f)
+print(decimal.Decimal(f).quantize(decimal.Decimal('1.00'), decimal.ROUND_HALF_EVEN))
 f = 14.589
+print('Представление в виде дроби двух чисел')
 print(f.as_integer_ratio())
+print('НОООООО')
+k = 0.2
+print('Представление в виде дроби двух чисел 0.2')
+print(k.as_integer_ratio())
+print(decimal.Decimal(str(k)).as_integer_ratio())
+
 print(f.is_integer())
 hexstr = f.hex()
 print(hexstr)

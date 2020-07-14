@@ -1,5 +1,6 @@
 import keyword
 from builtins import print
+import itertools
 
 print(keyword.kwlist)
 print(keyword.iskeyword('True'))
@@ -72,6 +73,7 @@ print('Result func type(Locals(x)', type(locals()))
 # map применяет функцию к каждому элементу последовательности
 
 slist = ['one', 'two', 'three', 'doc', 'five']
+print(type(map(str.upper, slist)))
 slist = list(map(str.upper, slist))     # в map передается функци без скобок
 print(slist)
 
@@ -105,10 +107,12 @@ print(slist)
 slist = [addsymbol(part) for part in slist]
 print(slist)
 slist = [addsymbol2(part1, part2) for part1 in slist for part2 in lst]  # здесь проход по всем циклам.....
+print('1')
 print(slist)
 slist = ['one', 'two', 'three', 'doc', 'five']
 # отрабатывает для пар элементов и так же останавливается по самой короткой последовательности
 slist = [part1+str(part2) for part1, part2 in zip(slist, lst)]
+print('2')
 print(slist)
 
 lst1 = [5, 10, 15, 12]
@@ -169,3 +173,25 @@ print(round(r, -4))
 powres = pow(2, 3, 3) # возведение 2 в степень 3 и нахождение остатка от деления на 3
 print(powres)
 
+# просмотр поведения zip
+
+a = []
+b = []
+
+for i, j in itertools.zip_longest(range(1, 5), range(10, 20)):
+    a.append(i)
+    b.append(j)
+
+print(a)
+print(b)
+
+
+a = []
+b = []
+
+for i, j in zip(range(1, 5), range(10, 20)):
+    a.append(i)
+    b.append(j)
+
+print(a)
+print(b)
