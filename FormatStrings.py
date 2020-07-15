@@ -1,4 +1,5 @@
-import  sys
+import sys
+import datetime
 
 
 # форматирование с помощью %
@@ -235,6 +236,7 @@ print('|{:_^20} выравнивание по центру|'.format(200))
 # про точность
 
 print('{:.4}'.format(51.256))
+print('{:.4f}'.format(51.256))
 print('{:.2f}'.format(51.256)) # точность для указанного типа f означает количество знаков после запятой, иначе просто длина строки что ли
 print('{:.4}'.format('LongString'))
 
@@ -255,17 +257,29 @@ print(s.format(10696))
 
 
 # форматирование с использованием f- строк
-
-name = 'Vasya'
+print('F strings')
+name = 'vasya'
 age = 35
-s = F'My name is {name}, my age {age}'
+s =  F'My name is {name}, my age is {age}'
 print(s)
 
+print(f'My name is {name.capitalize().swapcase()}')
 
 
-print(f'{2**3}')
+def to_lowercase(input):
+    return input.lower()
 
-print(f'My name {name.upper()}')
+print(f'My name is {to_lowercase(name)}')
+
+v = 51.256/100
+
+print(f'{v:*^ 50.2%}X')
+
+dt = datetime.date(2020, 10, 4)
+print(f'{dt:%d.%m.%Y}')
+
+
+
 
 
 
