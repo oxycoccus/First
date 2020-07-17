@@ -1,4 +1,5 @@
 from itertools import zip_longest
+import copy
 
 l = list('abcdefg')  # создание списка из итеррируемого объекта
 print('List')
@@ -79,6 +80,103 @@ print(l)
 
 print(l.pop())
 print(l)
+
+l.append('s')
+print(l)
+# поиск индекса первого элемента со значением value
+print('list.index(value): '+str(l.index('s', 0, len(l))))
+
+# подсчет количества элементов в списке со значением value
+print('list.count(value):', l.count('s'))
+
+
+print('Sorting:')
+a = [5, 9, 3, 1, 2, 7, 4, 8]
+print(a)
+# сортировка списка есть пара вариантов
+
+# revers направление сортировки по возрастанию или по убыванию
+a = sorted(a, reverse=0)
+print(a)
+
+a = [5, 9, 3, 1, 2, 7, 4, 8]
+print(a)
+
+a.sort(reverse=1)
+print(a)
+
+
+a = ['Duck', 'Apple', 'compare', 'CMD', 'dmx', 'apple']
+print(a)
+
+print(sorted(a, reverse=1))
+print(sorted(a, reverse=0))
+print('Сортировка не зависимо от регистра букв, используется указание функции сортировки через параметр key')
+print(sorted(a, key=str.lower, reverse=1))
+print(sorted(a, key=str.lower, reverse=0))
+
+# Тоже самое применимо для встроеной функции sort списка, которая изменяет исходный список
+
+a.sort(key=str.lower, reverse=1)
+print(a)
+
+a.sort(key=str.lower, reverse=0)
+print(a)
+
+print()
+a = [5, 9, 3, 1, 2, 7, 4, 8]
+print(a)
+
+# разворот списка
+a.sort()
+a.reverse()
+print(a)
+
+#отчистка списка
+a.clear()
+a = [ _ for _ in range(10)]
+a.reverse()
+print(a)
+
+# копирование списков
+
+
+print('Copy lists')
+
+a = [[1, 1, 1], [2, 2]]
+
+b = a
+
+print('a:', a)
+print('b:', b)
+a.append([3])
+print('a:', a)
+print('b:', b)
+# Shadow copy
+print('Shadow copy')
+b = a.copy()
+print('Add to a')
+a.append([4])
+print('a:', a)
+print('b:', b)
+
+print('Modify a[0][1]')
+a[0][1] = 11
+print('a:', a)
+print('b:', b)
+
+# Deep copy
+
+print('Deep copy')
+b = copy.deepcopy(a)
+
+print('a:', a)
+print('b:', b)
+print('Modify a[0][1]')
+a[0][1] = 0
+print('a:', a)
+print('b:', b)
+
 
 
 
